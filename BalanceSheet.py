@@ -68,6 +68,9 @@ class BalanceSheet:
     def print(self):
         return display(pd.DataFrame(data = [[self._portfolio, self._lending, self._borrowing, self._deposit, self.equity, self.leverage, self.default]], columns = ['portfolio', 'lending', 'borrowing', 'deposit', 'equity', 'leverage', 'default']))
     
+    @property
+    def values(self):
+        return [self._portfolio, self._lending, self._borrowing, self._deposit, self.equity, self.leverage, self.default]
     
 # test functions
 if __name__ == '__main__':
